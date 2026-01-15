@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>HarasPersona - 하라스 심리 분석 도우미</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg-from: #0f172a;
+        --bg-to: #0f172a;
+        --glass-bg: rgba(30, 41, 59, 0.7);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --text-primary: #e2e8f0;
+        --accent-primary: #6366f1;
+      }
+
+      body {
+        font-family: 'Noto Sans KR', sans-serif;
+        background-color: var(--bg-from);
+        color: var(--text-primary);
+        transition: background-color 0.5s ease, color 0.5s ease;
+        margin: 0;
+        -webkit-text-size-adjust: 100%;
+        touch-action: manipulation;
+        overflow-x: hidden;
+        min-width: 300px;
+        height: 100dvh;
+      }
+      
+      .glass-panel {
+        background: var(--glass-bg);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid var(--glass-border);
+        transition: background 0.5s ease, border-color 0.5s ease;
+      }
+
+      /* Marquee Animation */
+      @keyframes marquee-scroll {
+        0% { transform: translateX(50%); }
+        100% { transform: translateX(-100%); }
+      }
+      
+      .group-hover\/marquee-area\:animate-marquee-slow {
+          display: inline-block;
+          white-space: nowrap;
+          animation: marquee-scroll 15s linear infinite;
+      }
+
+      .hover-marquee:hover {
+        animation-play-state: paused;
+        cursor: pointer;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1); 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.15); 
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.25); 
+      }
+
+      /* Mobile Adjustment */
+      @media (max-width: 640px) {
+        body {
+          font-size: 14px;
+        }
+        .glass-panel {
+          backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
+        }
+      }
+    </style>
+
+  <script type="importmap">
+{
+  "imports": {
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.559.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.32.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "vite": "https://esm.sh/vite@^7.2.7",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "path": "https://esm.sh/path@^0.12.7",
+    "tty": "https://esm.sh/tty@^1.0.1"
+  }
+}
+</script>
+  <script type="module" crossorigin src="./assets/index-Bh2rpe7Q.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DNzuQsQV.css">
+</head>
+  <body>
+    <div id="root"></div>
+</body>
+</html>
